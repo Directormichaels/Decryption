@@ -33,12 +33,12 @@ def convert(string):
 code2 = convert(code) #...........splits the code variable using the convert() function 
 
 #===================Decryption=============================================================================
-bb=[] #...............................creates an empty list
-for x in code2: #.....................loops through the code2(encrypted) list
-    if x in key:
-        bb.append(key[x]) #...........checks the keys and appends the decrypted value to the bb-list
+new_list=[] #...............................creates an empty list
+for char in code2: #.....................loops through the code2(encrypted) list
+    if char in key:
+        new_list.append(key[char]) #...........checks the keys and appends the decrypted value to the new_list
 
-result = ''.join(bb) #................converts the list into a string
+result = ''.join(new_list) #................converts the list into a string
 print(result) #.......................print the result
 
 
